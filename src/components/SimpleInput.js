@@ -8,8 +8,12 @@ const nameInputChangeHandler = event => {
     setEnteredName(event.target.value)
 }
 
-const formSubmissionhandler = event => {
+const formSubmissionHandler = event => {
     event.preventDefault();
+    if (enteredName.trim() == '') {
+        return;
+    }
+
     console.log(enteredName);
 
     const enteredValue = nameInputRef.current.value;
@@ -19,7 +23,7 @@ const formSubmissionhandler = event => {
 }
 
     return (
-<form onSubmit={formSubmissionhandler}>
+<form onSubmit={formSubmissionHandler}>
     <div className= "form-control">
         <label htmlFor= 'name'>Your Name</label>
         <input
