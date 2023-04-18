@@ -1,21 +1,21 @@
 const BasicForm = (props) => {
     return (
         <form>
-<div>
-    <div>
-        <label>First Name</label>
-        <input/>
+<div className= 'control-group'>
+    <div className= 'form-control'>
+        <label htmlFor= 'name'>First Name</label>
+        <input type= 'text' id= 'name'/>
     </div>
-    <div>
-        <label></label>
-        <input/>
+    <div className= 'form-control'>
+        <label htmlFor= 'name'>Last Name</label>
+        <input type= 'text' id = 'name'/>
     </div>
 </div>
-            <div>
-                <label>E-Mail Address</label>
-                <input/>
+            <div className= 'form-control'>
+                <label htmlFor= 'name'>E-Mail Address</label>
+                <input type= 'text' id= 'name'/>
             </div>
-            <div>
+            <div className= 'form-actions'>
                 <button>Submit</button>
             </div>
         </form>
