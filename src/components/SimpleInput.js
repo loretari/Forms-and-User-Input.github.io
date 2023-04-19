@@ -38,7 +38,7 @@ const formSubmissionHandler = event => {
 
 
 const nameInputIsInvalid = !enteredNameIsValid && enteredNameTouched;
-const nameInputClasses = enteredNameIsValid
+const nameInputClasses = nameInputIsInvalid
     ? 'form-control invalid'
     : 'form-control ';
 
