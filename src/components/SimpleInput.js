@@ -16,6 +16,17 @@ const nameInputChangeHandler = event => {
     setEnteredName(event.target.value)
 }
 
+const nameInputBlurHandler = event => {
+setEnteredNameTouched(true)
+
+    if (enteredName.trim() === '') {
+        setEnteredNameIsValid(false)
+        return;
+    }
+
+setEnteredNameIsValid(true)
+}
+
 const formSubmissionHandler = event => {
     event.preventDefault();
 
@@ -51,6 +62,7 @@ const nameInputClasses = nameInputIsInvalid
             type= 'text'
             id= 'name'
             onChange={nameInputChangeHandler}
+            onBlur={nameInputBlurHandler}
        value={enteredName}
         />
         {nameInputIsInvalid && <p className= "error-text">Name must not be empty!</p>}
